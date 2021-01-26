@@ -9,7 +9,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+* [NeMo v0.10.1](https://github.com/NVIDIA/NeMo/tree/v0.10.1)
+* [PyTorch 1.5.0](https://pytorch.org/get-started/previous-versions/)
+* [FAISS](https://github.com/facebookresearch/faiss/blob/master/INSTALL.md)
 
 ```
 Give examples
