@@ -36,32 +36,16 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
+## Training
 To train the triplet encoder run:
 ```
 python TripletEncoder.py --name=test_encoder
 ```
-for additional arguments view TripletEncoder.py  or run:
-```
-python TripletEncoderClassifier.py --help
-```
-
 To train a no-triplet model, or to train a classifier based on the triplet encoder run:
 ```
 python TripletClassifier.py --name=test_classifier
 ```
-for additional arguments view TripletClassifier.py or run:
-```
-python TripletClassifier.py --help
-```
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+You can use ```--help``` to view the description of arguments
 
 ### And coding style tests
 
