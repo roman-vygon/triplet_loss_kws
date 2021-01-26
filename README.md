@@ -86,3 +86,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+## Additional files
+Data manifests, librispeech alignments and distance measures can be found [here](https://drive.google.com/drive/folders/13pDTAPn0fzJ2Q4IOmHobry3UsDtVz4ro?usp=sharing)
