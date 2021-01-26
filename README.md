@@ -12,6 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 * [NeMo v0.10.1](https://github.com/NVIDIA/NeMo/tree/v0.10.1)
 * [PyTorch 1.5.0](https://pytorch.org/get-started/previous-versions/)
 * [FAISS](https://github.com/facebookresearch/faiss/blob/master/INSTALL.md)
+* [TextGrid](https://pypi.org/project/TextGrid/)
 
 ```
 Give examples
@@ -37,8 +38,23 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To train the triplet encoder run:
+```
+python TripletEncoder.py --name=test_encoder
+```
+for additional arguments view TripletEncoder.py  or run:
+```
+python TripletEncoderClassifier.py --help
+```
 
+To train a no-triplet model, or to train a classifier based on the triplet encoder run:
+```
+python TripletClassifier.py --name=test_classifier
+```
+for additional arguments view TripletClassifier.py or run:
+```
+python TripletClassifier.py --help
+```
 ### Break down into end to end tests
 
 Explain what these tests test and why
