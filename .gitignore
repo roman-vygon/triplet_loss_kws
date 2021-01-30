@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# custom
+google_dataset_v1/
+google_dataset_v2/
+.ipynb_checkpoints/
+__pycache__/
+runs/
+files/
+ckpts/
+classifier_runs/
+wandb/
+*.out
+*.pt
+.idea/

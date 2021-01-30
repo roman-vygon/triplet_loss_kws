@@ -1,0 +1,44 @@
+{     
+    "10": 
+    {
+        "train":"/path/to/dataset/libri10_train.json",
+        "dev":"/path/to/dataset/libri10_dev.json",
+        "test":"/path/to/dataset/libri10_test.json"
+    },
+    
+     "12":
+    {
+         "train": "./google_dataset_v2/google_speech_recognition_v2/train12.json",
+        "dev":"./google_dataset_v2/google_speech_recognition_v2/dev12.json",
+        "test":"./google_dataset_v2/google_speech_recognition_v2/test12.json"  
+    },
+    
+    "35":
+    {
+        "train": "./google_dataset_v2/google_speech_recognition_v2/train_manifest.json",
+        "dev":"./google_dataset_v2/google_speech_recognition_v2/validation_manifest.json",
+        "test":"./google_dataset_v2/google_speech_recognition_v2/test_manifest.json"    
+    },    
+   
+    
+    "100": 
+    {
+        "train":"/path/to/dataset/libri100_train.json",
+        "dev":"/path/to/dataset/libri100_dev.json",
+        "test":"/path/to/dataset/libri100_test.json"
+    },
+    
+    "1000": 
+    {
+        "train":"/path/to/dataset/libri1000_train.json",
+        "dev":"/path/to/dataset/libri1000_dev.json",
+        "test":"/path/to/dataset/libri1000_test.json"
+    },
+    
+    "10000": 
+    {
+        "train":"/path/to/dataset/libri10000_train.json",
+        "dev":"/path/to/dataset/libri10000_dev.json",
+        "test":"/path/to/dataset/libri10000_test.json"
+    }
+}

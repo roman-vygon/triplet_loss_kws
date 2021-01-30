@@ -1,0 +1,140 @@
+model: "ResNet"
+sample_rate: &sample_rate 16000
+dropout: &drop 0.0
+repeat:  &rep  1
+augment: true
+lr_schedule: "PolynomialHoldDecayAnnealing"
+lr_warmup_proportion: 0.1
+kernel_size_factor: &kfactor 1.0
+
+
+AudioAugmentor:
+    shift:
+        prob: 0.8
+        min_shift_ms: -100.0
+        max_shift_ms: 100.0
+    noise:
+        prob: 0.8
+
+AudioToSpeechLabelDataLayer:
+    train:
+        shuffle: true
+        num_workers: 0
+    eval:
+        num_workers: 0
+        shuffle: false
+
+AudioToMelSpectrogramPreprocessor:
+    normalize: "per_feature"
+    window_size: 0.025
+    window_stride: 0.01
+    window: "hann"
+    features: &n_mels 64
+    frame_splicing: 1
+    dither: 0.00001
+    stft_conv: true
+    n_fft: 512
+
+AudioToMFCCPreprocessor:
+    window_size: 0.025
+    window_stride: 0.01
+    window: "hann"
+    n_mels: *n_mels
+    n_mfcc: *n_mels
+    n_fft: 512
+JasperEncoder:
+    feat_in: *n_mels
+    activation: "relu"
+    conv_mask: true
+
+    jasper:
+        -   filters: 256
+            repeat: 1
+            kernel: [33]
+            stride: [2]
+            dilation: [1]
+            dropout: 0.0
+            residual: false
+            separable: true
+
+        -   filters: 256
+            repeat: 5
+            kernel: [33]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 256
+            repeat: 5
+            kernel: [39]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 256
+            repeat: 5
+            kernel: [39]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 512
+            repeat: 5
+            kernel: [51]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 512
+            repeat: 5
+            kernel: [51]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 512
+            repeat: 5
+            kernel: [63]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 512
+            repeat: 5
+            kernel: [75]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: true
+            separable: true
+
+        -   filters: 512
+            repeat: 1
+            kernel: [87]
+            stride: [1]
+            dilation: [2]
+            dropout: 0.0
+            residual: false
+            separable: true
+
+        -   filters: 128
+            repeat: 1
+            kernel: [1]
+            stride: [1]
+            dilation: [1]
+            dropout: 0.0
+            residual: false
+
+labels: ["the", "and", "of", "to", "a", "in", "he", "i", "that", "was", "it", "his", "with", "as", "for", "is", "had", "you", "her", "but", "not", "be", "she", "at", "on", "they", "by", "him", "this", "have", "which", "all", "from", "so", "said", "one", "my", "were", "me", "we", "or", "their", "are", "there", "when", "them", "no", "an", "if", "would", "who", "what", "will", "been", "out", "then", "up", "into", "could", "do", "more", "man", "now", "some", "very", "little", "time", "your", "upon", "about", "like", "than", "any", "only", "has", "two", "did", "its", "well", "other", "our", "over", "good", "before", "great", "after", "down", "made", "can", "see", "these", "should", "such", "old", "know", "came", "day", "must", "how", "never"]
