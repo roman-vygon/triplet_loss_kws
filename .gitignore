@@ -138,5 +138,5 @@ ckpts/
 classifier_runs/
 wandb/
 *.out
-*.pt
+
 .idea/
