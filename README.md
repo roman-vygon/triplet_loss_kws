@@ -21,6 +21,14 @@ python TripletClassifier.py --name=test_classifier --manifest=MANIFEST --model=M
 ```
 You can use ```--help``` to view the description of arguments.
 
+#### Hardware Requirements
+Training was performed on a single Tesla K80 12GB.
+| Model         | Batch Size     | VRAM  |
+| ------------- |:-------------:| -----:|
+| Res15         | 35*4 | 11GB |
+| Res8      | 35*10      |   4GB |
+
+
 ## Testing
 
 To test a triplet encoder run:
