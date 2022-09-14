@@ -53,8 +53,6 @@ If the site doesn't load see [this code](https://github.com/tensorflow/datasets/
 ### Google Speech Commands 
 Use [this](https://github.com/NVIDIA/NeMo/blob/v0.10.1/examples/asr/notebooks/3_Speech_Commands_using_NeMo.ipynb) notebook to download and prepare the Google Speech Commands dataset.
 ## Additional files
-Data manifests, librispeech alignments and distance measures can be found ~~[here](https://drive.google.com/drive/folders/16jcbL3yPvFfZphL2VFg2mDcruh5KDXP2).
-You'll need to update the `manifests.json` file with the dataset path.
-You can convert LibriWords manifests with [convert_path_prefix.ipynb ](https://drive.google.com/file/d/1X3_MacQvyCXAInMq91iDs0EQVH6MwkSQ/view?usp=sharing)
-~~
+~~Data manifests, librispeech alignments and distance measures can be found [here](https://drive.google.com/drive/folders/16jcbL3yPvFfZphL2VFg2mDcruh5KDXP2). You'll need to update the `manifests.json` file with the dataset path. You can convert LibriWords manifests with [convert_path_prefix.ipynb](https://drive.google.com/file/d/1X3_MacQvyCXAInMq91iDs0EQVH6MwkSQ/view?usp=sharing)~~
+
 The files sadly went missing, I'll try to recover them, if anyone had a chance to download them please contact me.
