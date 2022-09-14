@@ -1,7 +1,7 @@
 # Learning Efficient Representations for Keyword Spotting with Triplet Loss
 
 Code for the paper [Learning Efficient Representations for Keyword Spotting with Triplet Loss](https://arxiv.org/abs/2101.04792) \
-by Roman Vygon(rvygon@ntr.ai) and Nikolay Mikhaylovskiy(nickm@ntr.ai).
+by Roman Vygon(roman.vygon@gmail.com) and Nikolay Mikhaylovskiy(nickm@ntr.ai).
 
 ### Prerequisites
 
